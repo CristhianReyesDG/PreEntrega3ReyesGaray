@@ -1,0 +1,277 @@
+/*Puesta en cero de valores por defecto de la pagina*/
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+/*header*/
+.header-clpr {
+  width: 100%;
+  background-color: #d7e8f0;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .header-clpr .header-tittle {
+    width: 100%;
+    text-align: center;
+  }
+}
+.header-clpr .header-link {
+  border-radius: 50%;
+  background-color: aliceblue;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media screen and (max-width: 480px) {
+  .header-clpr .header-nav {
+    width: 100%;
+  }
+}
+.header-clpr .header-ul {
+  padding: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .header-clpr .header-ul {
+    flex-direction: column;
+  }
+}
+.header-clpr .header-li {
+  list-style-type: none;
+  padding: 10px;
+  margin: 5px;
+}
+@media screen and (max-width: 480px) {
+  .header-clpr .header-li {
+    margin: 0em;
+  }
+}
+.header-clpr .header-li:hover {
+  transform: scale(110%);
+}
+
+.add-prov {
+  grid-area: provdat;
+}
+
+.ver-proveedores {
+  grid-area: proveedorlist;
+}
+
+.add-cl {
+  grid-area: clientdat;
+}
+
+.ver-clientes {
+  grid-area: clientlist;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .proveedores-main {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+main .proveedores-main .add-prov {
+  border: 2px solid black;
+  background-color: lightblue;
+  padding: 10px;
+}
+main .proveedores-main .add-prov .proveedores-datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main .proveedores-main .add-prov .proveedores-contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main .proveedores-main .add-prov .proveedores-contacto #obs-prov {
+  resize: none;
+  grid-area: textbox;
+}
+main .proveedores-main .add-prov .proveedores-contacto .proveedores-main .prov-datos-ad {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: "label . . " "textbox textbox subir" "textbox textbox  ." "textbox textbox  cancelar";
+}
+main .proveedores-main .add-prov .proveedores-contacto .proveedores-main .prov-datos-ad .subir-datos {
+  grid-area: subir;
+}
+main .proveedores-main .add-prov .proveedores-contacto .proveedores-main .prov-datos-ad .cancelar {
+  grid-area: cancelar;
+}
+main .proveedores-main .ver-proveedores {
+  padding: 20px;
+  border: 2px solid black;
+  background-color: rgb(100, 100, 172);
+  display: flex;
+  flex-direction: column;
+}
+main .proveedores-main .ver-proveedores .form-lista-prov {
+  display: grid;
+  grid-row: 1fr 1fr;
+  border: 1px solid;
+  margin: 5px;
+  padding: 10px;
+}
+main .proveedores-main .ver-proveedores .form-lista-prov .boton-busqueda {
+  display: flex;
+  justify-content: space-between;
+}
+main .proveedores-main .ver-proveedores .lista-proveedores {
+  border: 1px solid;
+  margin: 5px;
+  padding: 10px;
+}
+main .proveedores-main .ver-proveedores .encabezado-tabla {
+  border: 1px solid;
+  margin: 5px;
+  padding: 10px;
+}
+@media screen and (max-width: 480px) {
+  main .proveedores-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .proveedores-main .add-prov {
+    width: 100%;
+    border: 2px solid black;
+  }
+  main .proveedores-main .add-prov .proveedores-datos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  main .proveedores-main .add-prov .proveedores-contacto {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+  }
+  main .proveedores-main .ver-proveedores {
+    width: 100%;
+    border: 2px solid black;
+  }
+}
+main .clientes-main {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+main .clientes-main .add-cl {
+  border: 2px solid black;
+  background-color: lightblue;
+  padding: 20px;
+}
+main .clientes-main .add-cl .clientes-datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main .clientes-main .add-cl .clientes-contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main .clientes-main .add-cl #obs-cl {
+  resize: none;
+  grid-area: textbox;
+}
+main .clientes-main .ver-clientes {
+  padding: 20px;
+  background-color: rgb(100, 100, 172);
+  display: flex;
+  flex-direction: column;
+}
+main .clientes-main .cl-datos-ad {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: "label . . " "textbox textbox subir" "textbox textbox  ." "textbox textbox  cancelar";
+}
+main .clientes-main .cl-datos-ad .subir-datos {
+  grid-area: subir;
+}
+main .clientes-main .cl-datos-ad .cancelar {
+  grid-area: cancelar;
+}
+main .clientes-main .ver-clientes {
+  border: 2px solid black;
+}
+main .clientes-main .ver-clientes .form-lista-cl {
+  display: grid;
+  grid-row: 1fr 1fr;
+  border: 1px solid;
+  margin: 5px;
+  padding: 10px;
+}
+main .clientes-main .ver-clientes .form-lista-cl .boton-busqueda {
+  display: flex;
+  justify-content: space-between;
+}
+main .clientes-main .ver-clientes .lista-cl {
+  border: 1px solid;
+  margin: 5px;
+  padding: 10px;
+}
+main .clientes-main .ver-clientes .encabezado-tabla {
+  border: 1px solid;
+  margin: 5px;
+  padding: 10px;
+}
+@media screen and (max-width: 480px) {
+  main .clientes-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .clientes-main .add-cl {
+    width: 100%;
+    border: 2px solid black;
+  }
+  main .clientes-main .add-cl .cl-datos-add {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  main .clientes-main .add-cl .clientes-contacto {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+  }
+  main .clientes-main .ver-clientes {
+    width: 100%;
+    border: 2px solid black;
+  }
+}
+
+footer {
+  background-color: rgb(40, 19, 53);
+}
+
+.contacto {
+  display: flex;
+  height: 70px;
+  justify-content: space-evenly;
+}
+
+.contacto img {
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.footer-icon-hover:hover {
+  transform: scale(110%);
+}
+
+/*# sourceMappingURL=styles-cl-pr.css.map */

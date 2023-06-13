@@ -1,0 +1,296 @@
+@import '_valores';
+/*Puesta en cero de valores por defecto de la pagina*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/*header*/
+.header-clpr {
+    width: 100%;
+    background-color: #d7e8f0;
+    padding: 10px;
+    @include flex (row, wrap, space-between, center) ; 
+    .header-tittle{
+
+
+        @include media(){
+            width: 100%;
+            text-align: center;
+        }
+
+    }
+    .header-link{
+        border-radius: 50%;
+        background-color: aliceblue;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .header-nav{
+
+
+        @include media(){
+            width: 100%;
+        }
+    }
+    .header-ul{
+        padding: 15px;
+        @include flex ( row, wrap , flex-end, center);
+
+
+        @include media (){
+            flex-direction: column;
+        }
+    }
+    .header-li{
+        list-style-type: none;
+        padding: 10px;
+        margin: 5px;
+        @include media() {
+            margin: 0em;
+        }
+        &:hover{
+            transform: scale(110%);
+        }
+    }
+
+}
+
+
+    .add-prov{
+        grid-area: provdat;
+    }
+
+    .ver-proveedores{
+        grid-area: proveedorlist;
+    }
+
+    .add-cl{
+        grid-area: clientdat;
+    }
+
+    .ver-clientes{
+        grid-area: clientlist;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;  
+        align-items: center;
+        .proveedores-main{
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            .add-prov {
+                border: 2px solid black;
+                background-color: lightblue;
+                padding: 10px;
+                .proveedores-datos {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+            
+                }
+                .proveedores-contacto { 
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    #obs-prov {
+                        resize: none;
+                        grid-area: textbox;
+                    }
+                    .proveedores-main .prov-datos-ad{
+                        .subir-datos{
+                            grid-area: subir;
+                        }
+                        
+                        .cancelar{
+                            grid-area: cancelar;
+                        }
+                        display: grid;
+                        grid-gap: 10px;
+                        grid-template-areas:
+                        'label . . '
+                        'textbox textbox subir'
+                        'textbox textbox  .'
+                        'textbox textbox  cancelar'
+                        ;
+                        
+                    }
+                    
+                }           
+             
+            }
+            .ver-proveedores{
+                padding: 20px;
+                border: 2px solid black;
+                background-color: rgb(100, 100, 172);
+                display: flex;
+                flex-direction: column; 
+                .form-lista-prov{
+                    display: grid;
+                    grid-row: 1fr 1fr;
+                    border: 1px solid;
+                    margin: 5px;
+                    padding: 10px;
+                    .boton-busqueda {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+                .lista-proveedores{
+                    border: 1px solid;
+                    margin: 5px;
+                    padding: 10px;
+                
+                
+                }
+                .encabezado-tabla{
+                    border: 1px solid;
+                    margin: 5px;
+                    padding: 10px;
+                }
+            }
+        }
+        @include media(){
+            .proveedores-main{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .add-prov{
+                    width: 100%;
+                    border: 2px solid black;
+                    .proveedores-datos{
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                    }
+                    .proveedores-contacto{
+                        flex-wrap: wrap;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+                .ver-proveedores{
+                    width: 100%;
+                    border: 2px solid black;
+                }
+            }
+        }
+        .clientes-main{
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            .add-cl {
+                border: 2px solid black;
+                background-color: lightblue;
+                padding: 20px;
+                .clientes-datos {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;  
+                }
+                .clientes-contacto { 
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
+                #obs-cl {
+                    resize: none;
+                    grid-area: textbox;
+                }
+            }
+            .ver-clientes{
+                padding: 20px;
+                background-color: rgb(100, 100, 172);
+                display: flex;
+                flex-direction: column; 
+            }
+            .cl-datos-ad{
+                .subir-datos{
+                    grid-area: subir;
+                }
+                .cancelar{
+                    grid-area: cancelar;
+                }
+                display: grid;
+                grid-gap: 10px;
+                grid-template-areas:
+                'label . . '
+                'textbox textbox subir'
+                'textbox textbox  .'
+                'textbox textbox  cancelar'
+                ;
+            }
+            .ver-clientes{
+                border: 2px solid black;
+                .form-lista-cl{
+                    display: grid;
+                    grid-row: 1fr 1fr;
+                    border: 1px solid;
+                    margin: 5px;
+                    padding: 10px;
+                    .boton-busqueda {
+                        display: flex;
+                        justify-content: space-between;
+                     }
+                
+                }
+                .lista-cl{
+                    border: 1px solid;
+                    margin: 5px;
+                    padding: 10px;
+                }
+                .encabezado-tabla{
+                    border: 1px solid;
+                    margin: 5px;
+                    padding: 10px;
+                }
+            }   
+            
+        }
+         @include media(){
+            .clientes-main{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .add-cl{
+                    width: 100%;
+                    border: 2px solid black;
+                    .cl-datos-add{
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                    }
+                    .clientes-contacto{
+                        flex-wrap: wrap;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+                .ver-clientes{
+                    width: 100%;
+                    border: 2px solid black;
+                }
+            }
+         }
+    }
+
+    
+
+footer{
+    background-color: rgb(40, 19, 53);
+}
+
+.contacto{
+    display: flex;
+    height: 70px;
+    justify-content: space-evenly;
+}
+
+.contacto img{
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.footer-icon-hover:hover{
+    transform: scale(110%);
+}

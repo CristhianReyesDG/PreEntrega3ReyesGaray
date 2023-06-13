@@ -1,0 +1,154 @@
+@import '_valores';
+/*Puesta en cero de valores por defecto de la pagina*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/*header*/
+.header-index {
+    width: 100%;
+    background-color: #d7e8f0;
+    padding: 10px;
+    @include flex (row, wrap, space-between, center) ; 
+    .header-tittle{
+
+
+        @include media(){
+            width: 100%;
+            text-align: center;
+        }
+
+    }
+    .header-link{
+        border-radius: 50%;
+        background-color: aliceblue;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .header-nav{
+
+
+        @include media(){
+            width: 100%;
+        }
+    }
+    .header-ul{
+        padding: 15px;
+        @include flex ( row, wrap , flex-end, center);
+
+
+        @include media (){
+            flex-direction: column;
+        }
+    }
+    .header-li{
+        list-style-type: none;
+        padding: 10px;
+        margin: 5px;
+        @include media() {
+            margin: 0em;
+        }
+        &:hover{
+            transform: scale(110%);
+        }
+    }
+
+}
+
+/*Editado de la seccion proveedores*/
+
+.productos-main{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 10px;
+    background-color: rgb(173, 173, 233);
+}
+
+.productos-main .add-prod {
+    display: grid;
+    grid-template-columns: 1rf 1fr;
+    background-color: lightblue;
+    padding: 20px;
+}
+
+.productos-main .add-prod .busqueda-prod{
+    display: grid;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.productos-main .add-prod .busqueda-prod .boton-busqueda {
+    display: grid;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+/*Pestaña de visualizacion de Proveedores*/
+
+.productos-main .ver-productos{
+    padding: 20px;
+    background-color: rgb(100, 100, 172);
+    display: flex;
+    flex-direction: column; 
+}
+
+.productos-main .ver-productos .form-lista-prod{
+    display: grid;
+    grid-row: 1fr 1fr;
+    border: 1px solid;
+    margin: 5px;
+    padding: 10px;
+}
+
+.productos-main .ver-productos .form-lista-prod .boton-busqueda {
+        display: flex;
+        justify-content: space-between;
+}
+
+.productos-main .ver-productos .lista-productos{
+    border: 1px solid;
+    margin: 5px;
+    padding: 10px;
+
+
+}
+.productos-main .ver-productos .encabezado-tabla{
+    border: 1px solid;
+    margin: 5px;
+    padding: 10px;
+}
+
+
+.productos-main .ver-productos .form-lista-prod{
+    display: grid;
+    grid-row: 1fr 1fr;
+    border: 1px solid;
+    margin: 5px;
+    padding: 10px;
+
+}
+
+
+
+/*Footer*/
+footer{
+    background-color: rgb(40, 19, 53);
+}
+
+.contacto{
+    display: flex;
+    height: 70px;
+    justify-content: space-evenly;
+}
+
+.contacto img{
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.footer-icon-hover:hover{
+    transform: scale(110%);
+}

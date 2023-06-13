@@ -1,0 +1,213 @@
+@import '_valores';
+/*Puesta en cero de valores por defecto de la pagina*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/*header*/
+.header-index {
+    width: 100%;
+    background-color: #d7e8f0;
+    padding: 10px;
+    @include flex (row, wrap, space-between, center) ; 
+    .header-tittle{
+
+
+        @include media(){
+            width: 100%;
+            text-align: center;
+        }
+
+    }
+    .header-link{
+        border-radius: 50%;
+        background-color: aliceblue;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .header-nav{
+
+
+        @include media(){
+            width: 100%;
+        }
+    }
+    .header-ul{
+        padding: 15px;
+        @include flex ( row, wrap , flex-end, center);
+
+
+        @include media (){
+            flex-direction: column;
+        }
+    }
+    .header-li{
+        list-style-type: none;
+        padding: 10px;
+        margin: 5px;
+        @include media() {
+            margin: 0em;
+        }
+        &:hover{
+            transform: scale(110%);
+        }
+    }
+
+}
+
+main{
+    display: grid;
+    text-align: center;
+    .cards-conteiner{
+        height: 500px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        column-gap: 50px;
+        row-gap: 50px;
+        padding: 50px;
+        margin: 5px;
+        align-items: center;
+        .cards-c{
+                justify-items: center;
+                width: 30%;
+                border: 5px outset black;
+                padding: 10px;
+                height: 30rem;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            .cards img {
+                padding: 5px;
+                max-height: 100%;
+                max-width: 100%;
+            }
+    
+    }
+
+}
+
+@include media(){
+        main{
+            justify-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+            .header-h1{
+                font-size:medium;
+                margin: 1px;
+            }
+            .header-h2{
+                font-size: small;
+                margin: 1px;
+            }
+            
+            .cards-conteiner{
+                height: max-content;
+                display: flex;
+                flex-direction: column;
+                column-gap: 50px;
+                row-gap: 50px;
+                padding: 50px;
+                margin: 5px;
+                align-items: center;
+                .cards-c{
+                        height: 350px;
+                        width: 100%;
+                        justify-items: center;
+                        background-color: rgb(40, 19, 53);
+                        padding: 10px;
+                    }
+                    .cards img {
+                        padding: 5px;
+                        max-height: 100%;
+                        max-width: 100%;
+                    }
+            
+            }
+    }
+
+}
+
+
+
+
+
+.testimonios-cards{
+    padding: 15px;
+    div {
+        border: 10px double black;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin:20px;
+        .cards {
+            height: 300px;
+        }
+        .img-testimonio { 
+            padding: 5px;
+            margin: 10px;
+            max-height: 100%;
+            max-width: 100%;
+        }
+        p{
+            padding: 10px;
+            margin: 5px;
+            font-size: xx-large;
+        
+        }
+    }
+}
+
+
+@include media(){
+    .testimonios-cards{
+        padding: 15px;
+        div {
+            display: flex;
+            flex-direction: column;
+            .cards {
+                height: 300px;
+            }
+            .img-testimonio { 
+                padding: 5px;
+                margin: 10px;
+                max-height: 100%;
+                max-width: 100%;
+            }
+            p{
+                padding: 10px;
+                margin: 5px;
+                font-size: medium;
+            
+            }
+        }
+    }
+}
+
+
+
+footer{
+    background-color:#d7e8f0;
+    .contacto{
+        display: flex;
+        height: 70px;
+        justify-content: space-evenly;
+    }
+    .contacto img{
+        padding: 5px;
+        width: 50px;
+        height: 50px;
+    }
+    .datos-personales{
+        text-align: center;
+    }
+    
+    .footer-icon-hover:hover{
+        transform: scale(110%);
+    }
+
+
+
+}
+
+
+
+

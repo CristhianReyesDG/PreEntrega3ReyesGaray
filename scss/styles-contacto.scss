@@ -1,0 +1,132 @@
+@import '_valores';
+
+.header-index {
+    width: 100%;
+    background-color: #d7e8f0;
+    padding: 10px;
+    @include flex (row, wrap, space-between, center) ; 
+    .header-tittle{
+
+
+        @include media(){
+            width: 100%;
+            text-align: center;
+        }
+
+    }
+    .header-link{
+        border-radius: 50%;
+        background-color: aliceblue;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .header-nav{
+
+
+        @include media(){
+            width: 100%;
+        }
+    }
+    .header-ul{
+        padding: 15px;
+        @include flex ( row, wrap , flex-end, center);
+
+
+        @include media (){
+            flex-direction: column;
+        }
+    }
+    .header-li{
+        list-style-type: none;
+        padding: 10px;
+        margin: 5px;
+        @include media() {
+            margin: 0em;
+        }
+        &:hover{
+            transform: scale(110%);
+        }
+    }
+
+}
+
+.contacto{
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    .contacto-div{
+        border: 2px double black;
+        .car-img{
+            grid-area: imagen;
+        }
+        
+        .agradecimiento-div{
+            grid-area: agradecimiento;
+        }
+        
+        .form-contacto{
+            grid-area: form;
+        }
+        display: grid;
+        padding: 10px;
+        justify-content: space-between;
+        grid-template-areas: 
+        'imagen form agradecimiento'
+        ;
+        .card-img{
+            border: 2px double black;
+            background-color: rgb(205, 235, 245);
+            padding: 70px 10px 10px 10px;
+            display: grid;
+        
+        }
+        .agradecimiento-div{
+            border: 2px double black;
+            background-color: rgb(205, 235, 245);
+            display: grid;
+            padding: 70px 10px 10px 10px;
+        }
+        .form-contacto{
+            display: grid;
+            padding: 10px;
+            align-items: stretch;
+            text-align: center;
+        }
+    }
+    @include media(){
+            
+            .contacto-div{
+                display: flex;
+                flex-direction: column;
+                column-gap: 5px;
+                row-gap: 5px;
+                padding: 5px;
+                margin: 5px;
+                align-items: center;
+
+            }
+    }
+}
+
+
+.index-footer{
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(40, 19, 53);
+    .contacto-footer{
+        display: flex;
+        height: 70px;
+        justify-content: space-evenly;
+        img{
+            padding: 5px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+.footer-icon-hover:hover{
+    transform: scale(110%);
+}
+
+

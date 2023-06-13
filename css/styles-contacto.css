@@ -1,0 +1,123 @@
+.header-index {
+  width: 100%;
+  background-color: #d7e8f0;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .header-index .header-tittle {
+    width: 100%;
+    text-align: center;
+  }
+}
+.header-index .header-link {
+  border-radius: 50%;
+  background-color: aliceblue;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media screen and (max-width: 480px) {
+  .header-index .header-nav {
+    width: 100%;
+  }
+}
+.header-index .header-ul {
+  padding: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .header-index .header-ul {
+    flex-direction: column;
+  }
+}
+.header-index .header-li {
+  list-style-type: none;
+  padding: 10px;
+  margin: 5px;
+}
+@media screen and (max-width: 480px) {
+  .header-index .header-li {
+    margin: 0em;
+  }
+}
+.header-index .header-li:hover {
+  transform: scale(110%);
+}
+
+.contacto {
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+}
+.contacto .contacto-div {
+  border: 2px double black;
+  display: grid;
+  padding: 10px;
+  justify-content: space-between;
+  grid-template-areas: "imagen form agradecimiento";
+}
+.contacto .contacto-div .car-img {
+  grid-area: imagen;
+}
+.contacto .contacto-div .agradecimiento-div {
+  grid-area: agradecimiento;
+}
+.contacto .contacto-div .form-contacto {
+  grid-area: form;
+}
+.contacto .contacto-div .card-img {
+  border: 2px double black;
+  background-color: rgb(205, 235, 245);
+  padding: 70px 10px 10px 10px;
+  display: grid;
+}
+.contacto .contacto-div .agradecimiento-div {
+  border: 2px double black;
+  background-color: rgb(205, 235, 245);
+  display: grid;
+  padding: 70px 10px 10px 10px;
+}
+.contacto .contacto-div .form-contacto {
+  display: grid;
+  padding: 10px;
+  align-items: stretch;
+  text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .contacto .contacto-div {
+    display: flex;
+    flex-direction: column;
+    column-gap: 5px;
+    row-gap: 5px;
+    padding: 5px;
+    margin: 5px;
+    align-items: center;
+  }
+}
+
+.index-footer {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: rgb(40, 19, 53);
+}
+.index-footer .contacto-footer {
+  display: flex;
+  height: 70px;
+  justify-content: space-evenly;
+}
+.index-footer .contacto-footer img {
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.footer-icon-hover:hover {
+  transform: scale(110%);
+}
+
+/*# sourceMappingURL=styles-contacto.css.map */
